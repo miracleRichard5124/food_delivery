@@ -61,7 +61,7 @@ const Cart = () => {
               <p>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()+2}</p>
             </div>
           </div>
-          <button onClick={() => navigate("/order")}>PROCEED TO CHECKOUT</button>
+          <button className={`checkout-btn ${getTotalCartAmount() === 0 ? "disabled" : ""}`}onClick={() => navigate("/order")} disabled={getTotalCartAmount() === 0}>PROCEED TO CHECKOUT</button>
         </div>
         <div className="cart-promocode">
           <div>

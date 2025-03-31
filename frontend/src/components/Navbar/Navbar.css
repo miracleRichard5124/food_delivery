@@ -70,7 +70,7 @@
 .nav-profile-dropdown{
   position: absolute;
   display: none;
-  right: -1;
+  right: 0;
   z-index: 1;
 }
 

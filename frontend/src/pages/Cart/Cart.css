@@ -55,7 +55,7 @@
   margin: 10px 0px;
 }
 
-.cart-total button{
+.cart-total .checkout-btn{
   border: none;
   color: white;
   background-color: tomato;
@@ -63,6 +63,11 @@
   padding: 12px 0px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.cart-total .checkout-btn.disabled{
+  background-color: rgb(249, 180, 167);
+  cursor: not-allowed;
 }
 
 .cart-promocode{

@@ -38,7 +38,7 @@ const MyOrders = () => {
               <p>${order.amount}.00</p>
               <p>Total Items: {order.items.length}</p>
               <p><span>&#x25cf;</span> <b>{order.status}</b></p>
-              <button className='track-btn'>Track</button>
+              <button className='track-btn' onClick={() => fetchOrders()}>Track</button>
               <button className='revoke-btn'>Revoke</button>
             </div>
           )

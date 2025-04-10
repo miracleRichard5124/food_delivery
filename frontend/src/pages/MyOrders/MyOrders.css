@@ -9,9 +9,14 @@
   margin-top: 30px;
 }
 
+.order-header{
+  display: flex;
+  justify-content: space-between;
+}
+
 .my-orders-order{
   display: grid;
-  grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr 1fr;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
   align-items: center;
   gap: 30px;
   font-size: 14px;
@@ -34,7 +39,7 @@
   color: #454545;
 }
 
-.my-orders-order button{
+button{
   border: none;
   padding: 12px 5px;
   border-radius: 4px;
@@ -42,8 +47,10 @@
   color: #454545;
 }
 
-.my-orders-order .track-btn{
+.order-header .track-btn{
   background-color: #ffe1e1;
+  font-size: 12px;
+  padding: 10px 20px;
 }
 
 .my-orders-order .revoke-btn{

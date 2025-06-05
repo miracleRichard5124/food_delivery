@@ -8,8 +8,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 //placing user's order from the frontend
 const placeOrder = async(req, res) => {
 
-  const frontend_url = "http://localhost:5173"
-
+  const frontend_url = "https://localhost:5173/";
+_
   try {
     const newOrder = new orderModel({
       userId: req.body.userId,
@@ -17,7 +17,9 @@ const placeOrder = async(req, res) => {
       amount: req.body.amount,
       address: req.body.address
     })
+    console.log("Saving Order: ", newOrder);
     await newOrder.save();
+    console.log("Saved orderId: ", newOrder._id)
     await userModel.findByIdAndUpdate(req.body.userId, {cartData: {}});
 
     const line_items = req.body.items.map((item) => ({

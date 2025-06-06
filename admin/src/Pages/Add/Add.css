@@ -17,6 +17,8 @@
 
 .add-img-upload{
   border: 1px solid tomato;
+  display: flex;
+  align-items: center;
   padding: 30px 80px;
   border-radius: 20px;
 }
@@ -53,4 +55,25 @@
   color: white;
   font-size: 16px;
   cursor: pointer;
+}
+
+@media(max-width: 600px){
+  .add form{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .add-img-upload{
+    width: 70%;
+  }
+  .add-img-upload p{
+    display: none;
+  }
+  .add-product-name, .add-product-description{
+    width: 90%;
+  }
+  .add-category-price{
+    flex-direction: column;
+    align-items: center;
+  }
+
 }

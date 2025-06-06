@@ -2,11 +2,16 @@
   margin-bottom: 50px;
 }
 
+.list-table{
+  width: 90%;
+}
+
 .list-table-format{
   display: grid;
   grid-template-columns: 0.3fr 1fr 2fr 1fr 1fr 0.5fr;
   align-items: center;
   gap: 10px;
+  margin-top: 10px;
   padding: 12px 15px;
   border: 1px solid #cacaca;
   border-radius: 10px;
@@ -21,11 +26,27 @@
   width: 50px;
   border-radius: 4px;
 }
+  .cursor{
+    background: tomato;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    width: 60%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 4px;
+  }
 
 @media (max-width: 600px){
   .list-table-format{
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
+    font-size: 11px;
+  }
+
+  .list-table-format img{
+    width: 40px;
   }
 
   .list-table-format.title{

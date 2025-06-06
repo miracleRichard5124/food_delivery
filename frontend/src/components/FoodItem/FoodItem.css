@@ -44,7 +44,6 @@
   font-weight: 500;
   font-size: 22px;
   margin: 10px 0px;
-  position: absolute;
   bottom: 0;
 }
 
@@ -76,4 +75,14 @@
 .food-item-counter img{
   width: 30px;
   cursor: pointer;
+}
+
+@media(max-width: 600px){
+    .food-item{
+      max-width: 200px;
+      height: 350px;
+  }
+  .food-item-price{
+    position: absolute;
+  }
 }

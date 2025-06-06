@@ -34,6 +34,17 @@
   font-size: 12px;
 }
 
+@media(max-width: 600px){
+  .order-item{
+    font-size: 11px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .order-food-details{
+    font-size: 10px;
+  }
+}
+
 @media(max-width: 900px){
   .order-item{
     font-size: 12px;

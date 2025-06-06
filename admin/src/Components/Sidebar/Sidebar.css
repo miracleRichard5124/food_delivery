@@ -31,6 +31,12 @@
   border-color: tomato;
 } 
 
+@media(max-width: 600px){
+  .sidebar-option{
+    font-size: 5px;
+  }
+}
+
 @media(max-width: 900px){
   .sidebar-option p{
     display: none;

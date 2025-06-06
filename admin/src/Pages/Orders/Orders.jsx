@@ -41,7 +41,7 @@ const Orders = ({url}) => {
         {orders.map((order, index) => (
           <div key={index} className="order-item">
             <img src={admin_assets.parcel_icon} alt="" />
-            <div>
+            <div className='order-food-details'>
               <p className="order-item-food">
                 {order.items.map((item,index) => {
                   if(index === order.items.length-1){

@@ -14,3 +14,17 @@
   gap: 30px;
   row-gap: 50px;
 }
+
+
+@media(max-width: 654px){
+  .food-display-list{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 450px){
+  .food-display-list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

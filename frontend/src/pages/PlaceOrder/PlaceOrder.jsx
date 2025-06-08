@@ -91,7 +91,10 @@ const PlaceOrder = () => {
               <p>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()+2}</p>
             </div>
           </div>
-          <button className='checkout-btn' type='submit'>PROCEED TO PAYMENT</button>
+          <div className="payment-methods">
+            <button className='checkout-btn'> <span className='btn-span'></span>PAY WITH CASH</button>
+            <button className='checkout-btn' type='submit'> <span className='btn-span'></span>PAY WITH STRIPE</button>
+          </div>
         </div>
       </div>
     </form>

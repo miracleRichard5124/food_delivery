@@ -30,7 +30,7 @@
 
 .explore-menu-list-item img{
   width: 7.5vw;
-  min-width: 80px;
+  min-width: 60px;
   cursor: pointer;
   border-radius: 50%;
   transition: 0.3s;
@@ -58,6 +58,18 @@
 @media (max-width: 1050px){
   .explore-menu-text{
     max-width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 900px){
+  .explore-menu-list{
+    background: rgba(0, 0, 0, .1);
+    padding: 15px 10px;
+    border-radius: 10px;
+  }
+
+  .explore-menu-list-item p{
     font-size: 14px;
   }
 }

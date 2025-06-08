@@ -12,10 +12,11 @@
 .food-item-image{
   width: 100%;
   border-radius: 15px 15px 0px 0px;
+  height: 100%;
 }
 
 .food-item-info{
-  padding: 20px;
+  padding: 5px 20px;
 }
 
 .food-item-name-rating{
@@ -49,6 +50,7 @@
 
 .food-item-image-container{
   position: relative;
+  height: 55%;
 }
 
 .food-item-image-container .add{
@@ -84,5 +86,20 @@
   }
   .food-item-price{
     position: absolute;
+  }
+}
+
+@media(max-width: 530px){
+  .food-item{
+    height: 320px;
+  }
+  .food-item-name-rating p{
+    font-size: 15px;
+  }
+  .food-item-name-rating img{
+    width: 50px;
+  }
+  .food-item-desc{
+    font-size: 11px;
   }
 }

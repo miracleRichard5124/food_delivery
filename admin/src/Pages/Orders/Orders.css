@@ -9,6 +9,8 @@
   margin: 30px 0px;
   font-size: 14px;
   color: #505050;
+  transition: 0.3s;
+  animation: fadeIn 0.5s;
 }
 
 .order-item-food, .order-item-name{
@@ -45,7 +47,7 @@
   }
 }
 
-@media(max-width: 900px){
+@media(max-width: 1000px){
   .order-item{
     font-size: 12px;
     grid-template-columns: 0.5fr 2fr 1fr;
@@ -57,5 +59,14 @@
   }
   .order-item img{
     width: 40px;
+  }
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0
+  }
+  100%{
+    opacity: 1;
   }
 }

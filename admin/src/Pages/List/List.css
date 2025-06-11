@@ -15,6 +15,8 @@
   padding: 12px 15px;
   border: 1px solid #cacaca;
   border-radius: 10px;
+  transition: .5s;
+  animation: fadeIn .3s;
   font-size: 13px;
 }
 
@@ -25,6 +27,8 @@
 .list-table-format img{
   width: 50px;
   border-radius: 4px;
+  transition: .5s;
+  animation: fadeIn .3s;
 }
   .cursor{
     background: tomato;
@@ -51,5 +55,14 @@
 
   .list-table-format.title{
     display: none;
+  }
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity:1
   }
 }

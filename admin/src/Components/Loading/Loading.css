@@ -1,16 +1,16 @@
-.verify{
+.loading{
   min-height: 60vh;
   display: grid;
 }
 
-.verify .spinner{
+.loading .spinner{
   width: 80px;
   height: 80px;
   place-self: center;
   border: 5px solid #bdbdbd;
   border-top-color: tomato;
   border-radius: 50%;
-  animation: rotate 1s infinite;
+  animation: rotate .5s infinite;
 }
 
 @keyframes rotate{

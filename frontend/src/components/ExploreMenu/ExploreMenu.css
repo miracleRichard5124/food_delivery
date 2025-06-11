@@ -14,6 +14,13 @@
   color: #808080;
 }
 
+
+.menu-section{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .explore-menu-list{
   display: flex;
   justify-content: space-between;
@@ -30,7 +37,7 @@
 
 .explore-menu-list-item img{
   width: 7.5vw;
-  min-width: 60px;
+  min-width: 50px;
   cursor: pointer;
   border-radius: 50%;
   transition: 0.3s;
@@ -41,6 +48,11 @@
   color: #747474;
   font-size: max(1.4vw, 16px);
   cursor: pointer;
+}
+
+.menu-section .slide-btn{
+  display: none;
+  font-size: 20px;
 }
 
 .explore-menu hr{
@@ -67,6 +79,11 @@
     background: rgba(0, 0, 0, .1);
     padding: 15px 10px;
     border-radius: 10px;
+  }
+
+  .menu-section .slide-btn{
+    display: block;
+    cursor: pointer;
   }
 
   .explore-menu-list-item p{

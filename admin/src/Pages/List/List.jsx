@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./List.css";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Loading from "../../Components/Loading/Loading";
 
 const List = ({url}) => {
 
+  const [loading, setLoading] = useState(true);
   const [list, setList] = useState([]);
   const fetchList = async () => {
     const response = await axios.get(`${url}/api/food/list`);
@@ -13,6 +15,7 @@ const List = ({url}) => {
     } else {
       toast.error("Error fething data");
     }
+    setLoading(false)
   };
 
   const removeFood = async(foodId) => {
@@ -41,7 +44,13 @@ const List = ({url}) => {
           <b>Price</b>
           <b>Action</b>
         </div>
-        {list.map((item, index) => {
+        {loading
+          ?
+          (
+            <Loading/>
+          ) : (
+          list.map((item, index) => {
+          if(list.length > 0){
           return(
             <div className="list-table-format" key={index}>
               <p>{index + 1}</p>
@@ -52,7 +61,10 @@ const List = ({url}) => {
               <p onClick={() => removeFood(item._id)} className="cursor">X</p>
             </div>
           )
-        })}
+          } else{
+            <h2>No Item has been added yet</h2>
+          }})
+        )}
       </div>
     </div>
   );

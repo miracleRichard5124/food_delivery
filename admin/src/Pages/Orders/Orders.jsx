@@ -4,10 +4,12 @@ import { useState } from 'react';
 import axios from 'axios';
 import {toast} from 'react-toastify';
 import { useEffect } from 'react';
-import {admin_assets} from '../../assets/admin_assets'
+import {admin_assets} from '../../assets/admin_assets';
+import Loading from '../../Components/Loading/Loading';
 
 const Orders = ({url}) => {
 
+  const [loading, setLoading] = useState(true);
   const [orders, setOrders] = useState([]);
 
   const fetchAllOrders = async() => {
@@ -18,6 +20,7 @@ const Orders = ({url}) => {
     } else{
       toast.error("Error!")
     }
+    setLoading(false)
   }
 
   const statusHandler = async(event, orderId) => {
@@ -38,7 +41,12 @@ const Orders = ({url}) => {
     <div className='order add'>
       <h3>Order Page</h3>
       <div className="order-list">
-        {orders.map((order, index) => (
+        {loading
+          ? (
+            <Loading/>
+          ) : (
+          orders.map((order, index) => {
+            if(orders.length > 0){
           <div key={index} className="order-item">
             <img src={admin_assets.parcel_icon} alt="" />
             <div className='order-food-details'>
@@ -66,7 +74,12 @@ const Orders = ({url}) => {
               <option value="Delivered">Delivered</option>
             </select>
           </div>
-        ))}
+            } else{
+              <div className="order-item">
+                <h2>No Orders made yet</h2>
+              </div>
+            }
+        }))}
       </div>
     </div>
   );
